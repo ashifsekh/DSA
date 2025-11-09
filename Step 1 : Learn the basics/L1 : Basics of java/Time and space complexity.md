@@ -63,8 +63,3 @@ Time complexity is computed in terms of the **Worst Case Scenario** and simplifi
 * **Rule of Thumb:** Most online servers (LeetCode, etc.) execute $\approx 10^8$ operations per second.
 * **Time Limit 1 Second:** If a problem has a time limit of 1 second, your optimal algorithm's total operations should be $\approx O(10^8)$ or less, given the maximum input size $N$.
 
----
-
-This format is much better for a `README.md` file.
-
-**Do you want to send the script for the next lecture (Patterns/Loops), or would you like me to convert another previous set of notes into this GitHub-friendly markdown format?**
