@@ -1,9 +1,3 @@
-That's an excellent idea. When learning sorting, understanding the **thinking process and the exact algorithm** (the approach) is far more important than just the code.
-
-I've structured the notes below to clearly define the goal, the thinking, and the step-by-step process for Selection Sort, Bubble Sort, and Insertion Sort, along with the corresponding Java code and complexity analysis.
-
------
-
 # ⚙️ DSA Notes: Basic Sorting Techniques (Comparison Sorts)
 
 The primary goal of these algorithms is to **place elements in their correct, sorted position** one by one.
