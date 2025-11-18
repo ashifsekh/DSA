@@ -37,7 +37,32 @@ The core idea is to break the array into a **Sorted section (Left)** and an **Un
 
 ### 💻 Java Code Example (implementation matches provided class)
 
-````java
+```java
+class Selection_sort {
+    public static void main(String[] args) {
+        int arr[] = {45,3,245,98,10};
+        int n = arr.length;
+
+        for (int i = 0; i <= n-1 ; i++) {
+            int minIndex = i;
+            for (int j = i; j <= n-1; j++) {
+                if (arr[j] < arr[minIndex]) {
+                    minIndex = j;
+                }
+            }
+            // Swap the found minimum element with the first element
+            int temp = arr[minIndex];
+            arr[minIndex] = arr[i];
+            arr[i] = temp;
+        }
+        for (int k = 0; k<=n-1; k++){
+            System.out.println(arr[k]);
+        }
+    }
+
+}
+```
+
 ## II. Bubble Sort
 
 **Goal:** Repeatedly "bubble up" the largest element to its correct position at the end of the array through adjacent swapping.
@@ -53,21 +78,21 @@ Implementation note: the provided `Bubble_sort` class uses a simple, standard lo
 
 ### 📝 Algorithm (implementation-style)
 
-| Step | Outer Loop (I) | Inner Loop (J) | Action |
-| :--- | :--- | :--- | :--- |
-| **1.** | $i=0$ (1st pass) | $J: 0 \rightarrow N-2$ | Compare $A[j]$ and $A[j+1]$. Swap if $A[j] > A[j+1]$. |
-| **2.** | | | **Maximum element** of the array will be at $\mathbf{A[N-1]}$ after the first pass. |
-| **3.** | $i=1$ (2nd pass) | $J: 0 \rightarrow N-3$ | Compare adjacent pairs up to the newly established boundary. |
-| **4.** | | | **Second maximum** will be at $\mathbf{A[N-2]}$ after the second pass. |
+| Step   | Outer Loop (I)   | Inner Loop (J)         | Action                                                                              |
+| :----- | :--------------- | :--------------------- | :---------------------------------------------------------------------------------- |
+| **1.** | $i=0$ (1st pass) | $J: 0 \rightarrow N-2$ | Compare $A[j]$ and $A[j+1]$. Swap if $A[j] > A[j+1]$.                               |
+| **2.** |                  |                        | **Maximum element** of the array will be at $\mathbf{A[N-1]}$ after the first pass. |
+| **3.** | $i=1$ (2nd pass) | $J: 0 \rightarrow N-3$ | Compare adjacent pairs up to the newly established boundary.                        |
+| **4.** |                  |                        | **Second maximum** will be at $\mathbf{A[N-2]}$ after the second pass.              |
 
 ### ⏱ Complexity Analysis
 
-| Case | Time Complexity | Notes |
-| :--- | :--- | :--- |
-| **Worst/Average Case** | $\mathbf{O(N^2)}$ | Occurs when the array is sorted in reverse order. |
-| **Best Case** | $\mathbf{O(N^2)}$ | The basic implementation without early-exit still performs the nested loops even when the array is already sorted. |
+| Case                   | Time Complexity   | Notes                                                                                                              |
+| :--------------------- | :---------------- | :----------------------------------------------------------------------------------------------------------------- |
+| **Worst/Average Case** | $\mathbf{O(N^2)}$ | Occurs when the array is sorted in reverse order.                                                                  |
+| **Best Case**          | $\mathbf{O(N^2)}$ | The basic implementation without early-exit still performs the nested loops even when the array is already sorted. |
 
-  * **Space Complexity:** $O(1)$ (in-place, uses only a temp variable for swapping).
+- **Space Complexity:** $O(1)$ (in-place, uses only a temp variable for swapping).
 
 ### 💻 Java Code Example (matches provided class)
 
@@ -93,7 +118,7 @@ public class Bubble_sort {
     }
 
 }
-````
+```
 
 ### 💻 Java Code Example (Optimized)
 
